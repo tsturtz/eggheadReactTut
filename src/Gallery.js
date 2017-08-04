@@ -50,12 +50,15 @@ export class Gallery extends Component {
   //     selectedImage
   //   })
   // }
+  componentDidMount() {
+    this.props.loadImages();
+  }
   render() {
     // render this stuff according to the component's state
     // const {images, selectedImage} = this.state;
     // const {images, selectedImage} = this.props;
     // const {images, selectedImage, dispatch} = this.props;
-    const {images, selectedImage, selectImage} = this.props;
+    const {images, selectedImage, selectImage, error} = this.props;
     return (
       <div className="image-gallery">
         <div className="gallery-image">
